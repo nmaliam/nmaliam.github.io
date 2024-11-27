@@ -1,0 +1,69 @@
+.container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Increased gap between rows */
+        }
+
+        .row {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 250px; /* Increased row height */
+        }
+
+        .image-column {
+            flex: 1;
+            max-width: 33.33%; /* Image column covers one-third of the row */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-column {
+            flex: 2;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .scrollable-text {
+            max-height: 200px; /* Adjusted to fit within the larger row */
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        .scrollable-text p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+                height: auto; /* Allow rows to adjust height on smaller screens */
+            }
+
+            .image-column {
+                max-width: 100%;
+            }
+
+            .text-column {
+                padding: 10px;
+            }
+
+            .scrollable-text {
+                max-height: none;
+            }
+        }

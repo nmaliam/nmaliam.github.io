@@ -1,0 +1,38 @@
+
+
+.partners-section {
+    width: 100%;
+    overflow: hidden;
+    
+    padding: 20px;
+}
+
+.logo-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.logos img {
+    height: 100px; /* Adjust logo size */
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

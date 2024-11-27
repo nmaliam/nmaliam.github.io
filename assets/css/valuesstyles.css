@@ -1,0 +1,54 @@
+.corevalues {
+    text-align: center;
+    color: darkblue;
+    font-family: "Helvetica, Arial, sans-serif";
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 circles per row */
+    gap: 16px;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    justify-items: center;
+}
+
+.circle-item {
+    background-color: #ffffff;
+    color: #003366;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+}
+
+.circle-item:hover {
+    background-color: #003366; /* Dark blue on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design to adjust to smaller screens */
+@media (max-width: 600px) {
+    .circle-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 circles per row on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .circle-container {
+        grid-template-columns: 1fr; /* 1 circle per row on very small screens */
+    }
+}

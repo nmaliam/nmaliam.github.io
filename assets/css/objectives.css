@@ -1,0 +1,93 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Section Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 40px; /* Increased bottom margin */
+    color: #0d125b;
+     margin-top: 40px;
+}
+h1 span{
+    color:#ffa500;
+    
+}
+
+.objectives-section {
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+/* Grid container for objectives */
+.objectives-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
+    gap: 50px; /* Increased the gap between the grid items */
+}
+
+/* Individual objective boxes */
+.objective-box {
+    background-color: #ffffff;
+    padding: 40px 20px 20px 20px; /* Increased top padding to allow room for the circle */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+    overflow: visible; /* To allow the number circle to overflow */
+}
+
+.objective-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Circle with the objective number */
+.objective-number {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0d125b;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .objectives-container {
+        grid-template-columns: 1fr; /* Switch to single column on small screens */
+    }
+}
+
+/* Responsive text adjustments */
+@media (max-width: 600px) {
+    .objective-box {
+        font-size: 14px;
+    }
+    .objective-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
